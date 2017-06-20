@@ -1,4 +1,5 @@
 import React from 'react'
+import './Github.css'
 
 class Github extends React.Component {
   render() {
