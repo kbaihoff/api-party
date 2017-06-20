@@ -12,15 +12,23 @@ class GithubUser extends Component {
     }
   }
   
-  constructor(props) {
+  constructor(props) { // default props = {match: Object, location: Object, history: Object, staticContent: undefined}
     super(props)
-    this.fetchUserData()
+    this.fetchUserData(props)
+    console.log(props)
   }
 
-  fetchUserData = () => {
-    fetch(`https://api.github.com/users/${this.props.match.params.username}`)
+  componentWillReceiveProps = (nextProps) => {
+    if (this.props.match.params.username !== nextProps.match.params.username) {
+      this.fetchUserData(nextProps)
+    }
+  }
+
+  fetchUserData = (props) => {
+    fetch(`https://api.github.com/users/${props.match.params.username}`)
       .then(response => response.json())
       .then(user => this.setState({ user }))
+      .catch(error => console.warn(error))
   }
 
   render() {

@@ -15,11 +15,13 @@ class App extends Component {
           <ul className="nav-links">
             <li>
               <NavLink to='/github'>Github API</NavLink>
+              {/*Add another NavLink for a new link*/}
             </li>
           </ul>
         </div>
         <Switch>
           <Route path='/github' component={Github} />
+          {/*Add another Route for a new link*/}
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
       </div>
