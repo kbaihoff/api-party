@@ -6,7 +6,7 @@
 }
 
 h1 {
-  font: 60px/75px 'Alfa Slab One', cursive, sans-serif;
+  font: 60px/75px 'Alfa Slab One', cursive, sans-serif; /* font-ize/line-height */
   text-transform: uppercase;
 }
 
@@ -19,4 +19,32 @@ h3 {
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+.nav-links {
+  list-style: none; /* Gets rid of dot */
+  padding-left: 0;
+}
+
+.nav-links li {
+  display: inline-block; /* li can show up next to each other */
+  padding: 0 15px;
+}
+
+.nav-links a {
+  color: #02b1ff;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.nav-links a.active { /* Applies to active links */
+  color: #F79824;
+}
+
+.nav-links a.active:hover {
+  color: #FDCA40;
+}
+
+.nav-links a:hover {
+  color: #0184be;
 }
