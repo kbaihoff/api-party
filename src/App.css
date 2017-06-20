@@ -28,6 +28,7 @@ h3 {
 
 .nav-links li {
   display: inline-block; /* li can show up next to each other */
+  justify-content: center;
   padding: 0 15px;
 }
 

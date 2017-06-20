@@ -15,7 +15,6 @@ class GithubUser extends Component {
   constructor(props) { // default props = {match: Object, location: Object, history: Object, staticContent: undefined}
     super(props)
     this.fetchUserData(props)
-    console.log(props)
   }
 
   componentWillReceiveProps = (nextProps) => {
@@ -28,6 +27,7 @@ class GithubUser extends Component {
     fetch(`https://api.github.com/users/${props.match.params.username}`)
       .then(response => response.json())
       .then(user => this.setState({ user }))
+      .then(console.log(this.state.user))
       .catch(error => console.warn(error))
   }
 

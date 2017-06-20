@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom'
-import './App.css';
 import Github from './Github'
+import OpenWeatherMap from './OpenWeatherMap'
+import './App.css';
 
 class App extends Component {
   render() {
@@ -15,12 +16,14 @@ class App extends Component {
           <ul className="nav-links">
             <li>
               <NavLink to='/github'>Github API</NavLink>
+              <NavLink to='/openweathermap'>OpenWeatherMap API</NavLink>
               {/*Add another NavLink for a new link*/}
             </li>
           </ul>
         </div>
         <Switch>
           <Route path='/github' component={Github} />
+          <Route path='/openweathermap' component={OpenWeatherMap} />
           {/*Add another Route for a new link*/}
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
