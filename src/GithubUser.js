@@ -7,7 +7,9 @@ class GithubUser extends Component {
   }
 
   fetchUserData = () => {
-    console.log('Fetch!')
+    fetch(`https://api.github.com/users/${this.props.match.params.username}`)
+      .then(response => response.json())
+      .then(user => console.log(user))
   }
 
   render() {
