@@ -27,7 +27,6 @@ class GithubUser extends Component {
     fetch(`https://api.github.com/users/${props.match.params.username}`)
       .then(response => response.json())
       .then(user => this.setState({ user }))
-      .then(console.log(this.state.user))
       .catch(error => console.warn(error))
   }
 
