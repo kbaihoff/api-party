@@ -30,7 +30,7 @@ class OpenWeatherMap extends React.Component {
             <button type="submit">Look up location</button>
           </div>
         </form>
-        <Route exact path='/openweathermap' render={() => <h3>Please enter a location to search on OpenWeatherMap</h3>} />
+        <Route exact path='/openweathermap' render={() => <h3>Please enter a city name to search on OpenWeatherMap</h3>} />
         <Route path='/openweathermap/:location' component={OpenWeatherMapLocation} />
           {/*params.location refers to the :location in the path*/}
       </div>

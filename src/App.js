@@ -18,7 +18,7 @@ class App extends Component {
             <li>
               <NavLink to='/github' className="nl">Github</NavLink>
               <NavLink to='/openweathermap'className="nl">OpenWeatherMap</NavLink>
-              <NavLink to='/instagram' className="nl">Instagram</NavLink>
+              {/*<NavLink to='/instagram' className="nl">Instagram</NavLink>*/}
               {/*Add another NavLink for a new link*/}
             </li>
           </ul>
@@ -26,7 +26,7 @@ class App extends Component {
         <Switch>
           <Route path='/github' component={Github} />
           <Route path='/openweathermap' component={OpenWeatherMap} />
-          <Route path='/instagram' component={Instagram} />
+          {/*<Route path='/instagram' component={Instagram} />*/}
           {/*Add another Route for a new link*/}
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
