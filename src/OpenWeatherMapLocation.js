@@ -17,7 +17,10 @@ class OpenWeatherMapLocation extends React.Component {
         description: '',
         icon: '',
         main: '',
-      }]
+      }],
+      wind: {
+        speed: '',
+      }
     }
   }
 
@@ -46,12 +49,14 @@ class OpenWeatherMapLocation extends React.Component {
     console.log(location)
     return (
       <div className="location">
-        <h2>{location.name} ({location.coord.lat}° N, {location.coord.lon}° E)</h2>
-        <h3>Current temperature: {location.main.temp}° C</h3>
+        <h2> Current forecast in {location.name} ({location.coord.lat}° N, {location.coord.lon}° E)</h2>
         <h3>
-          Current forecast: {location.weather[0].description}
+          {location.weather[0].description}
           <img src={imgSrc} alt={location.weather[0].icon} />
         </h3>
+        <h3>Temperature: {location.main.temp}° C</h3>
+        <h3>Humidity: {location.main.humidity}%</h3>
+        <h3>Windspeed: {location.wind.speed} meters/second</h3>
       </div>
     ) 
   }

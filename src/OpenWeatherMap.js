@@ -21,7 +21,7 @@ class OpenWeatherMap extends React.Component {
   render() {
     return (
       <div className="openweathermap">
-        <img src="" alt="openweathermap logo" className="openweathermap-logo" />
+        <img src="https://raw.githubusercontent.com/danyweis/pics4codepen/master/weather/icon/openweathermap.png" alt="openweathermap logo" className="openweathermap-logo" />
         <form onSubmit={this.handleSubmit}>
           <div>
             <input type="text" value={this.state.location} onChange={this.handleChange} />
