@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import OpenWeatherMapLocation from './OpenWeatherMapLocation'
+import './OpenWeatherMap.css'
 
 class OpenWeatherMap extends React.Component {
   state = {
