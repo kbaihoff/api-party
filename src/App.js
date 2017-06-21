@@ -15,8 +15,8 @@ class App extends Component {
           </div>
           <ul className="nav-links">
             <li>
-              <NavLink to='/github'>Github API</NavLink>
-              <NavLink to='/openweathermap'>OpenWeatherMap API</NavLink>
+              <NavLink to='/github' className="nl">Github API</NavLink>
+              <NavLink to='/openweathermap'className="nl">OpenWeatherMap API</NavLink>
               {/*Add another NavLink for a new link*/}
             </li>
           </ul>

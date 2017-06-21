@@ -32,6 +32,10 @@ h3 {
   padding: 0 15px;
 }
 
+.nl + .nl {
+  padding-left: 20px;
+}
+
 .nav-links a {
   color: #02b1ff;
   text-decoration: none;
